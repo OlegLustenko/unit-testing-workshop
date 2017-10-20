@@ -1,0 +1,32 @@
+{
+  "name": "unit-testing-workshop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Oleh Lustenko",
+    "email": "oleg.lustenko@gmail.com"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.57.3",
+    "flow-typed": "^2.2.0",
+    "jest": "^21.2.1",
+    "sinon": "^4.0.1"
+  },
+  "babel": {
+    "presets": ["env", "flow"]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js)$": "babel-jest"
+    }
+  }
+}
