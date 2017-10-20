@@ -25,7 +25,10 @@ export const updateMathCreator = ({
   let state = getState();
   let component = selector(state);
 
-  removeRefValues(selectMathKey(component, increasedIndex).coordinate)(dispatch, getState);
+  removeRefValues(selectMathKey(component, increasedIndex).coordinate)(
+    dispatch,
+    getState
+  );
 
   // update state
   state = getState();
@@ -55,9 +58,7 @@ export const updateMathCreator = ({
     }
   });
 
-  dispatch(
-    enableLazyMode()
-  );
+  dispatch(enableLazyMode());
 };
 
 export const updateMath = updateMathCreator({
